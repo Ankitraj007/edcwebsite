@@ -12,7 +12,7 @@ body{
 	margin-top:-8px;
 }
 .navbar1 ul{
-	
+
 	margin-top:25px;
 }
 .navbar1 ul a {
@@ -28,20 +28,20 @@ body{
 	margin-top:-25px;
 }
 @media only screen and (max-width: 767px) {
-    
+
 	.nav_collapsible_content ul{
 		margin-left:7px;
 		margin-top:50px;
 	}
-    
+
 }
 @media only screen and (max-width: 862px) and (min-width:768px) {
-    
+
 	.navbar1 ul{
-	
+
 	margin-top:-25px;
 }
-    
+
 }
 
 /*navbar1*/
@@ -78,9 +78,12 @@ body{
   background-color:#F7F7F7;
   min-height:73px;
   margin-bottom:35px;
+	padding-top:20px;
+	padding-bottom:20px;
+	justify-content: space-evenly;
 }
 .flex-container>p{
-  
+
   margin: 10px;
   padding:20px;
   font-size: 30px;
@@ -96,11 +99,12 @@ body{
   text-align: center;
 }
 .flex-container>select{
+	display:flex;
   height:54px;
   max-width:180px;
-  margin:25px;
-  padding:20px;
-  font-size: 30px;
+  margin:auto;
+	padding-left:30px;
+	font-size: 30px;
   text-align: center;
   background-color:#E8E8E8;
 }
@@ -126,7 +130,7 @@ body{
 /*panel*/
 #exTab2 .tab-content {
   color :#404040;
- 
+
   padding : 5px 15px;
 }
 #exTab2 .tab-pane p{
@@ -155,7 +159,7 @@ body{
 	border-left:5px solid #F2C94C;
 }
 @media only screen and (max-width: 992px) {
-    
+
 	#exTab2 .tab-pane p{
 	font-size:14px;}
 	#exTab1 .tab-pane p{
@@ -163,7 +167,7 @@ body{
 	}
 }
 @media only screen and (max-width: 698px) {
-    
+
 	#exTab2 .tab-pane p{
 	font-size:10px;}
 	#exTab1 .tab-pane p{
@@ -171,7 +175,7 @@ body{
 	}
 }
 @media only screen and (max-width: 542px) {
-    
+
 	#exTab2 .tab-pane p{
 	font-size:8px;}
 	#exTab1 .tab-pane p{
@@ -181,16 +185,19 @@ body{
 
 
 
-    
+
 
 /*panel*/
 /*display property*/
 .mySlides {display:none}
+
 .color_panel_button{
 	opacity:0.5;
 }
+.color_panel_button1{
+	opacity:0.5;
+}
 /*display property*/
-
-
-
-
+.panel2{
+	display:none;
+}
