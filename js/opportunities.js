@@ -8,14 +8,56 @@
                       $('.section1').css('display','inline-block');
                       $('.section2').css('display','inline-block');
                       $('.container2').css('display','none');
-
+                   
+                      
                     var y = document.getElementsByClassName("paneltab1");
                     var z = document.getElementsByClassName("paneltab2");
+                    var f = document.getElementsByClassName("tabpane");
+                    var ffff = document.getElementsByClassName("tabpane2");
+                    var gggg = ffff.length;
+                    var nnnn = Math.floor(gggg/6);
+                    
+                    
 
 
 
+                    
+                    var g = f.length;
+                    var nn = Math.floor(g/6);
 
-                      function addLink(){
+
+
+                    for(var ii=0;ii<g;ii++){
+                      var jj = ii + 1;
+                      var kkk=jj%6;
+                      if(kkk == 0){kkk=6}
+                      var integerPart;
+                     
+                      if(jj%6==0){integerPart=Math.floor(jj/6)-1}
+                        else{ integerPart = Math.floor(jj/6);}
+                       
+                        var addclass = "tab" + integerPart + "pane";
+                        $(f[ii]).addClass(addclass);
+                        var newclass = "tab-pane"+kkk+"";
+                        $(f[ii]).addClass(newclass);
+                        
+
+                        }
+                        
+                       
+
+
+                       for(var mm=0;mm<=nn;mm++){
+                          var classadd =".tab"+ mm +"pane";
+                          $(classadd).wrapAll( '<div id="exTab2" class="paneltab mySlides panel1 paneltab1"><div class="tab-content clearfix"></div></div>' );
+                          
+                        }
+                     var x = document.getElementsByClassName("mySlides");
+                    
+                     
+
+
+                                 function addLink(){
                                  var currentDiv = "currentDiv("+j+")"
                                  var $input = $('<a href="#" class="panel_button demo" style="font-size:30px;border-left:2px solid #000000;color:#000000;margin-left:10px;padding-left:10px;">'+j+'</a>');
                                  $input.attr("onclick",currentDiv)
@@ -26,7 +68,78 @@
                                  addLink()
                                  j++
                              }
-                             function addLink2(){
+                      var dots = document.getElementsByClassName("demo");
+
+                      
+                      
+
+                      var slideIndex = 1;
+                      showDivs(slideIndex);
+
+                      function plusDivs(n) {
+                        showDivs(slideIndex += n);
+                      }
+
+                      function currentDiv(n) {
+                        showDivs(slideIndex = n);
+                      }
+
+                      function showDivs(n) {
+                        var i;
+
+
+                        
+                        
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                           x[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                           dots[i].className = dots[i].className.replace(" color_panel_button", "");
+                        }
+                        x[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " color_panel_button";
+                      }
+
+                         
+                 
+                     
+                          $( ".panel_button" ).click(function( event ) {
+                            event.preventDefault();
+
+                          });
+                          $( ".panel_button1" ).click(function( event ) {
+                            event.preventDefault();
+
+                          });
+
+                    
+
+                   
+                    for(var ii=0;ii<gggg;ii++){
+                      var jj = ii + 1;
+                      var kkk=jj%6;
+                      if(kkk == 0){kkk=6}
+                      var integerPart;
+                     
+                      if(jj%6==0){integerPart=Math.floor(jj/6)-1}
+                        else{ integerPart = Math.floor(jj/6);}
+                       
+                        var addclass = "tab" + integerPart + "pane2";
+                        $(ffff[ii]).addClass(addclass);
+                        var newclass = "tab-pane"+kkk+"";
+                        $(ffff[ii]).addClass(newclass);
+                        
+
+                        }
+                         for(var mm=0;mm<=nnnn;mm++){
+                          var classadd =".tab"+ mm +"pane2";
+                          $(classadd).wrapAll( '<div id="exTab2" class="paneltab mySlides2 panel2 paneltab2"><div class="tab-content clearfix"></div></div>' );
+                          
+                        }
+                          
+                           function addLink2(){
 
                                         var currentDiv = "currentDiv1("+k+")"
                                         var $input = $('<a href="#" class="panel_button1 demos" style="font-size:30px;border-left:2px solid #000000;color:#000000;margin-left:10px;padding-left:10px;">'+k+'</a>');
@@ -38,7 +151,8 @@
                                         addLink2()
                                         k++
                                     }
-
+                        
+                         
 
 
 
@@ -77,34 +191,6 @@
 
 
 
-                      var slideIndex = 1;
-                      showDivs(slideIndex);
-
-                      function plusDivs(n) {
-                        showDivs(slideIndex += n);
-                      }
-
-                      function currentDiv(n) {
-                        showDivs(slideIndex = n);
-                      }
-
-                      function showDivs(n) {
-                        var i;
-
-                        var x = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("demo");
-                        if (n > x.length) {slideIndex = 1}
-                        if (n < 1) {slideIndex = x.length}
-                        for (i = 0; i < x.length; i++) {
-                           x[i].style.display = "none";
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                           dots[i].className = dots[i].className.replace(" color_panel_button", "");
-                        }
-                        x[slideIndex-1].style.display = "block";
-                        dots[slideIndex-1].className += " color_panel_button";
-                      }
-
                       $('.nav-pills li:nth-child(1) a').click(function(){
                         $('.panel_panel2').css('display','none');
                         $('.panel_panel1').css('display','block');
@@ -122,6 +208,12 @@
                      $('.container1').css('display','none');
                    });
 
+                
+
+
+
+
+                      
 
 
 
